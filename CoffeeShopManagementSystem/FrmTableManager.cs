@@ -28,12 +28,64 @@ namespace CoffeeShopManagementSystem
         public FrmTableManager(Account account)
         {
             InitializeComponent();
-
             this.LoginAccount = account;
 
+            Form_Load();
             LoadTableList();
             loadCategories();
             LoadCbBoxTable(cbTblSwicth);
+        }
+
+        private Color originalBackColor;
+        private Color originalForeColor;
+
+        private void Form_Load()
+        {
+            originalBackColor = adminToolStripMenuItem.BackColor;
+            originalForeColor = adminToolStripMenuItem.ForeColor;
+
+            adminToolStripMenuItem.AutoToolTip = false;
+
+            adminToolStripMenuItem.MouseEnter += (s, args) =>
+            {
+                adminToolStripMenuItem.BackColor = Color.Gray;
+                adminToolStripMenuItem.ForeColor = Color.Black;
+            };
+
+            adminToolStripMenuItem.MouseLeave += (s, args) =>
+            {
+                adminToolStripMenuItem.BackColor = originalBackColor;
+                adminToolStripMenuItem.ForeColor = originalForeColor;
+            };
+
+
+            accountManagementToolStripMenuItem.AutoToolTip = false;
+
+            accountManagementToolStripMenuItem.MouseEnter += (s, args) =>
+            {
+                accountManagementToolStripMenuItem.BackColor = Color.Gray;
+                accountManagementToolStripMenuItem.ForeColor = Color.Black;
+            };
+
+            accountManagementToolStripMenuItem.MouseLeave += (s, args) =>
+            {
+                accountManagementToolStripMenuItem.BackColor = originalBackColor;
+                accountManagementToolStripMenuItem.ForeColor = originalForeColor;
+            };
+
+            logOutToolStripMenuItem1.AutoToolTip = false;
+
+            logOutToolStripMenuItem1.MouseEnter += (s, args) =>
+            {
+                logOutToolStripMenuItem1.BackColor = Color.Gray;
+                logOutToolStripMenuItem1.ForeColor = Color.Black;
+            };
+
+            logOutToolStripMenuItem1.MouseLeave += (s, args) =>
+            {
+                logOutToolStripMenuItem1.BackColor = originalBackColor;
+                logOutToolStripMenuItem1.ForeColor = originalForeColor;
+            };
         }
 
         #region Methods
@@ -342,5 +394,14 @@ namespace CoffeeShopManagementSystem
             }
         }
         #endregion
+
+        private void cbTblSwicth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+        }
     }
 }

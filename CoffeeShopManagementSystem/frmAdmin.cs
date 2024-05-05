@@ -29,6 +29,7 @@ namespace CoffeeShopManagementSystem
             InitializeComponent();
             DataLoad();
         }
+
         #region methods
 
         List<Drink> SearchDrinkByName(string name)
@@ -607,6 +608,16 @@ namespace CoffeeShopManagementSystem
         }
 
         private void tabPage1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDownTypeAcc_ValueChanged(object sender, EventArgs e)
         {
 
         }

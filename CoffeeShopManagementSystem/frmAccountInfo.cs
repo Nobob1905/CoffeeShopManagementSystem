@@ -124,6 +124,11 @@ namespace CoffeeShopManagementSystem
         {
             this.Close();
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
     public class AccountEvent : EventArgs

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccountInfo));
             this.panel2 = new System.Windows.Forms.Panel();
             this.txbUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,11 +67,12 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.Controls.Add(this.txbUsername);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(9, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(607, 66);
+            this.panel2.Size = new System.Drawing.Size(780, 66);
             this.panel2.TabIndex = 2;
             // 
             // txbUsername
@@ -79,7 +81,7 @@
             this.txbUsername.Location = new System.Drawing.Point(171, 22);
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.ReadOnly = true;
-            this.txbUsername.Size = new System.Drawing.Size(433, 31);
+            this.txbUsername.Size = new System.Drawing.Size(606, 31);
             this.txbUsername.TabIndex = 1;
             // 
             // label1
@@ -94,11 +96,12 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.txbDisplayName);
             this.panel1.Controls.Add(this.lblDisplayName);
             this.panel1.Location = new System.Drawing.Point(9, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(607, 66);
+            this.panel1.Size = new System.Drawing.Size(780, 66);
             this.panel1.TabIndex = 3;
             // 
             // txbDisplayName
@@ -106,7 +109,7 @@
             this.txbDisplayName.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbDisplayName.Location = new System.Drawing.Point(174, 22);
             this.txbDisplayName.Name = "txbDisplayName";
-            this.txbDisplayName.Size = new System.Drawing.Size(430, 31);
+            this.txbDisplayName.Size = new System.Drawing.Size(603, 31);
             this.txbDisplayName.TabIndex = 1;
             // 
             // lblDisplayName
@@ -121,11 +124,12 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
             this.panel3.Controls.Add(this.txbPassword);
             this.panel3.Controls.Add(this.lblPassword);
             this.panel3.Location = new System.Drawing.Point(9, 156);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(607, 66);
+            this.panel3.Size = new System.Drawing.Size(780, 66);
             this.panel3.TabIndex = 4;
             // 
             // txbPassword
@@ -133,7 +137,7 @@
             this.txbPassword.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbPassword.Location = new System.Drawing.Point(174, 22);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.Size = new System.Drawing.Size(430, 31);
+            this.txbPassword.Size = new System.Drawing.Size(603, 31);
             this.txbPassword.TabIndex = 1;
             this.txbPassword.UseSystemPasswordChar = true;
             // 
@@ -149,19 +153,21 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
             this.panel4.Controls.Add(this.txbNewPassword);
             this.panel4.Controls.Add(this.lblNewPassword);
             this.panel4.Location = new System.Drawing.Point(9, 444);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(607, 66);
+            this.panel4.Size = new System.Drawing.Size(780, 66);
             this.panel4.TabIndex = 5;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // txbNewPassword
             // 
             this.txbNewPassword.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbNewPassword.Location = new System.Drawing.Point(174, 22);
             this.txbNewPassword.Name = "txbNewPassword";
-            this.txbNewPassword.Size = new System.Drawing.Size(430, 31);
+            this.txbNewPassword.Size = new System.Drawing.Size(603, 31);
             this.txbNewPassword.TabIndex = 1;
             this.txbNewPassword.UseSystemPasswordChar = true;
             // 
@@ -178,11 +184,12 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
             this.panel5.Controls.Add(this.txbVerifyPassword);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Location = new System.Drawing.Point(9, 516);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(607, 66);
+            this.panel5.Size = new System.Drawing.Size(780, 66);
             this.panel5.TabIndex = 6;
             // 
             // txbVerifyPassword
@@ -190,7 +197,7 @@
             this.txbVerifyPassword.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbVerifyPassword.Location = new System.Drawing.Point(174, 22);
             this.txbVerifyPassword.Name = "txbVerifyPassword";
-            this.txbVerifyPassword.Size = new System.Drawing.Size(430, 31);
+            this.txbVerifyPassword.Size = new System.Drawing.Size(603, 31);
             this.txbVerifyPassword.TabIndex = 1;
             this.txbVerifyPassword.UseSystemPasswordChar = true;
             // 
@@ -206,33 +213,38 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Navy;
             this.btnUpdate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnUpdate.Location = new System.Drawing.Point(404, 588);
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(423, 588);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(103, 38);
+            this.btnUpdate.Size = new System.Drawing.Size(180, 46);
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
+            this.btnExit.BackColor = System.Drawing.Color.Coral;
             this.btnExit.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnExit.Location = new System.Drawing.Point(513, 588);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(609, 588);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(103, 38);
+            this.btnExit.Size = new System.Drawing.Size(180, 46);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.Gainsboro;
             this.panel6.Controls.Add(this.txbIPhone);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Location = new System.Drawing.Point(9, 228);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(607, 66);
+            this.panel6.Size = new System.Drawing.Size(780, 66);
             this.panel6.TabIndex = 9;
             // 
             // txbIPhone
@@ -240,7 +252,7 @@
             this.txbIPhone.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbIPhone.Location = new System.Drawing.Point(174, 22);
             this.txbIPhone.Name = "txbIPhone";
-            this.txbIPhone.Size = new System.Drawing.Size(430, 31);
+            this.txbIPhone.Size = new System.Drawing.Size(603, 31);
             this.txbIPhone.TabIndex = 1;
             // 
             // label3
@@ -255,11 +267,12 @@
             // 
             // panel7
             // 
+            this.panel7.BackColor = System.Drawing.Color.Gainsboro;
             this.panel7.Controls.Add(this.txbIEmail);
             this.panel7.Controls.Add(this.label4);
             this.panel7.Location = new System.Drawing.Point(9, 300);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(607, 66);
+            this.panel7.Size = new System.Drawing.Size(780, 66);
             this.panel7.TabIndex = 10;
             // 
             // txbIEmail
@@ -267,7 +280,7 @@
             this.txbIEmail.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbIEmail.Location = new System.Drawing.Point(174, 22);
             this.txbIEmail.Name = "txbIEmail";
-            this.txbIEmail.Size = new System.Drawing.Size(430, 31);
+            this.txbIEmail.Size = new System.Drawing.Size(603, 31);
             this.txbIEmail.TabIndex = 1;
             // 
             // label4
@@ -282,11 +295,12 @@
             // 
             // panel8
             // 
+            this.panel8.BackColor = System.Drawing.Color.Gainsboro;
             this.panel8.Controls.Add(this.txbIAddress);
             this.panel8.Controls.Add(this.label5);
             this.panel8.Location = new System.Drawing.Point(9, 372);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(607, 66);
+            this.panel8.Size = new System.Drawing.Size(780, 66);
             this.panel8.TabIndex = 11;
             // 
             // txbIAddress
@@ -294,7 +308,7 @@
             this.txbIAddress.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbIAddress.Location = new System.Drawing.Point(174, 22);
             this.txbIAddress.Name = "txbIAddress";
-            this.txbIAddress.Size = new System.Drawing.Size(430, 31);
+            this.txbIAddress.Size = new System.Drawing.Size(603, 31);
             this.txbIAddress.TabIndex = 1;
             // 
             // label5
@@ -312,7 +326,8 @@
             this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 640);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(801, 640);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -323,9 +338,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAccountInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Your Information";
+            this.Text = "Personal Profile";
             this.Load += new System.EventHandler(this.frmAccountInfo_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

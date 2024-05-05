@@ -11,7 +11,7 @@ namespace CoffeeShopManagementSystem.DAL
     public class TableDAL
     {
         private static TableDAL instance;
-        public static int tableWidth = 100;
+        public static int tableWidth = 150;
         public static int tableHeight = 80;
 
         public static TableDAL Instance 
