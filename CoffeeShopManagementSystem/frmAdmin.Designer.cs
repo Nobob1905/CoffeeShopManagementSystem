@@ -54,7 +54,6 @@
             this.txbUsernameAcc = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.btnViewAcc = new System.Windows.Forms.Button();
             this.btnModifyAcc = new System.Windows.Forms.Button();
             this.btnDeleteAcc = new System.Windows.Forms.Button();
             this.btnAddAcc = new System.Windows.Forms.Button();
@@ -69,7 +68,6 @@
             this.txbTblID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.btnViewTbl = new System.Windows.Forms.Button();
             this.btnModifyTbl = new System.Windows.Forms.Button();
             this.btnDeleteTbl = new System.Windows.Forms.Button();
             this.btnAddTbl = new System.Windows.Forms.Button();
@@ -84,7 +82,6 @@
             this.txbCateID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.btnViewCate = new System.Windows.Forms.Button();
             this.btnModifyCate = new System.Windows.Forms.Button();
             this.btnDeleteCate = new System.Windows.Forms.Button();
             this.btnAddCate = new System.Windows.Forms.Button();
@@ -107,11 +104,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txbISearchtem = new System.Windows.Forms.TextBox();
             this.btnSearchItem = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnView = new System.Windows.Forms.Button();
-            this.btnModify = new System.Windows.Forms.Button();
-            this.btnDeleteItem = new System.Windows.Forms.Button();
-            this.btnAddItem = new System.Windows.Forms.Button();
             this.tpProceeds = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnViewInvoice = new System.Windows.Forms.Button();
@@ -120,6 +112,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewInvoice = new System.Windows.Forms.DataGridView();
             this.Report = new System.Windows.Forms.TabControl();
+            this.btnAddItem = new System.Windows.Forms.Button();
+            this.btnDeleteItem = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tpAccount.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel29.SuspendLayout();
@@ -156,12 +152,12 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.tpProceeds.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoice)).BeginInit();
             this.Report.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tpAccount
@@ -174,7 +170,7 @@
             this.tpAccount.Padding = new System.Windows.Forms.Padding(3);
             this.tpAccount.Size = new System.Drawing.Size(1127, 656);
             this.tpAccount.TabIndex = 4;
-            this.tpAccount.Text = "Account";
+            this.tpAccount.Text = "Accounts";
             // 
             // panel22
             // 
@@ -232,7 +228,7 @@
             this.dataGridViewAccount.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewAccount.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAccount.Location = new System.Drawing.Point(9, 9);
+            this.dataGridViewAccount.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewAccount.Name = "dataGridViewAccount";
             this.dataGridViewAccount.ReadOnly = true;
             this.dataGridViewAccount.RowHeadersWidth = 51;
@@ -410,7 +406,6 @@
             // 
             // panel28
             // 
-            this.panel28.Controls.Add(this.btnViewAcc);
             this.panel28.Controls.Add(this.btnModifyAcc);
             this.panel28.Controls.Add(this.btnDeleteAcc);
             this.panel28.Controls.Add(this.btnAddAcc);
@@ -419,23 +414,12 @@
             this.panel28.Size = new System.Drawing.Size(1115, 57);
             this.panel28.TabIndex = 4;
             // 
-            // btnViewAcc
-            // 
-            this.btnViewAcc.BackColor = System.Drawing.Color.Gray;
-            this.btnViewAcc.ForeColor = System.Drawing.Color.White;
-            this.btnViewAcc.Location = new System.Drawing.Point(193, 3);
-            this.btnViewAcc.Name = "btnViewAcc";
-            this.btnViewAcc.Size = new System.Drawing.Size(180, 46);
-            this.btnViewAcc.TabIndex = 3;
-            this.btnViewAcc.Text = "View";
-            this.btnViewAcc.UseVisualStyleBackColor = false;
-            this.btnViewAcc.Click += new System.EventHandler(this.btnViewAcc_Click);
-            // 
             // btnModifyAcc
             // 
             this.btnModifyAcc.BackColor = System.Drawing.Color.Navy;
+            this.btnModifyAcc.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnModifyAcc.ForeColor = System.Drawing.Color.White;
-            this.btnModifyAcc.Location = new System.Drawing.Point(751, 3);
+            this.btnModifyAcc.Location = new System.Drawing.Point(645, 0);
             this.btnModifyAcc.Name = "btnModifyAcc";
             this.btnModifyAcc.Size = new System.Drawing.Size(180, 46);
             this.btnModifyAcc.TabIndex = 2;
@@ -446,8 +430,9 @@
             // btnDeleteAcc
             // 
             this.btnDeleteAcc.BackColor = System.Drawing.Color.Maroon;
+            this.btnDeleteAcc.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDeleteAcc.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteAcc.Location = new System.Drawing.Point(565, 3);
+            this.btnDeleteAcc.Location = new System.Drawing.Point(459, 0);
             this.btnDeleteAcc.Name = "btnDeleteAcc";
             this.btnDeleteAcc.Size = new System.Drawing.Size(180, 46);
             this.btnDeleteAcc.TabIndex = 1;
@@ -458,8 +443,9 @@
             // btnAddAcc
             // 
             this.btnAddAcc.BackColor = System.Drawing.Color.Green;
+            this.btnAddAcc.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddAcc.ForeColor = System.Drawing.Color.White;
-            this.btnAddAcc.Location = new System.Drawing.Point(379, 3);
+            this.btnAddAcc.Location = new System.Drawing.Point(273, 0);
             this.btnAddAcc.Name = "btnAddAcc";
             this.btnAddAcc.Size = new System.Drawing.Size(180, 46);
             this.btnAddAcc.TabIndex = 0;
@@ -478,7 +464,7 @@
             this.tpTable.Padding = new System.Windows.Forms.Padding(3);
             this.tpTable.Size = new System.Drawing.Size(1127, 656);
             this.tpTable.TabIndex = 3;
-            this.tpTable.Text = "Table";
+            this.tpTable.Text = "Tables";
             // 
             // panel20
             // 
@@ -569,7 +555,6 @@
             // 
             // panel19
             // 
-            this.panel19.Controls.Add(this.btnViewTbl);
             this.panel19.Controls.Add(this.btnModifyTbl);
             this.panel19.Controls.Add(this.btnDeleteTbl);
             this.panel19.Controls.Add(this.btnAddTbl);
@@ -578,23 +563,12 @@
             this.panel19.Size = new System.Drawing.Size(1115, 57);
             this.panel19.TabIndex = 5;
             // 
-            // btnViewTbl
-            // 
-            this.btnViewTbl.BackColor = System.Drawing.Color.Gray;
-            this.btnViewTbl.ForeColor = System.Drawing.Color.White;
-            this.btnViewTbl.Location = new System.Drawing.Point(193, 3);
-            this.btnViewTbl.Name = "btnViewTbl";
-            this.btnViewTbl.Size = new System.Drawing.Size(180, 46);
-            this.btnViewTbl.TabIndex = 3;
-            this.btnViewTbl.Text = "View";
-            this.btnViewTbl.UseVisualStyleBackColor = false;
-            this.btnViewTbl.Click += new System.EventHandler(this.btnViewTbl_Click);
-            // 
             // btnModifyTbl
             // 
             this.btnModifyTbl.BackColor = System.Drawing.Color.Navy;
+            this.btnModifyTbl.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnModifyTbl.ForeColor = System.Drawing.Color.White;
-            this.btnModifyTbl.Location = new System.Drawing.Point(751, 3);
+            this.btnModifyTbl.Location = new System.Drawing.Point(645, 0);
             this.btnModifyTbl.Name = "btnModifyTbl";
             this.btnModifyTbl.Size = new System.Drawing.Size(180, 46);
             this.btnModifyTbl.TabIndex = 2;
@@ -605,8 +579,9 @@
             // btnDeleteTbl
             // 
             this.btnDeleteTbl.BackColor = System.Drawing.Color.Maroon;
+            this.btnDeleteTbl.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDeleteTbl.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTbl.Location = new System.Drawing.Point(565, 3);
+            this.btnDeleteTbl.Location = new System.Drawing.Point(459, 0);
             this.btnDeleteTbl.Name = "btnDeleteTbl";
             this.btnDeleteTbl.Size = new System.Drawing.Size(180, 46);
             this.btnDeleteTbl.TabIndex = 1;
@@ -617,8 +592,9 @@
             // btnAddTbl
             // 
             this.btnAddTbl.BackColor = System.Drawing.Color.Green;
+            this.btnAddTbl.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddTbl.ForeColor = System.Drawing.Color.White;
-            this.btnAddTbl.Location = new System.Drawing.Point(379, 3);
+            this.btnAddTbl.Location = new System.Drawing.Point(273, 0);
             this.btnAddTbl.Name = "btnAddTbl";
             this.btnAddTbl.Size = new System.Drawing.Size(180, 46);
             this.btnAddTbl.TabIndex = 0;
@@ -637,7 +613,7 @@
             this.tpCategory.Padding = new System.Windows.Forms.Padding(3);
             this.tpCategory.Size = new System.Drawing.Size(1127, 656);
             this.tpCategory.TabIndex = 2;
-            this.tpCategory.Text = "Category";
+            this.tpCategory.Text = "Categories";
             // 
             // panel18
             // 
@@ -729,7 +705,6 @@
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.btnViewCate);
             this.panel11.Controls.Add(this.btnModifyCate);
             this.panel11.Controls.Add(this.btnDeleteCate);
             this.panel11.Controls.Add(this.btnAddCate);
@@ -739,25 +714,12 @@
             this.panel11.TabIndex = 1;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
-            // btnViewCate
-            // 
-            this.btnViewCate.BackColor = System.Drawing.Color.Gray;
-            this.btnViewCate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnViewCate.ForeColor = System.Drawing.Color.White;
-            this.btnViewCate.Location = new System.Drawing.Point(193, 3);
-            this.btnViewCate.Name = "btnViewCate";
-            this.btnViewCate.Size = new System.Drawing.Size(180, 46);
-            this.btnViewCate.TabIndex = 3;
-            this.btnViewCate.Text = "View";
-            this.btnViewCate.UseVisualStyleBackColor = false;
-            this.btnViewCate.Click += new System.EventHandler(this.btnViewCate_Click);
-            // 
             // btnModifyCate
             // 
             this.btnModifyCate.BackColor = System.Drawing.Color.Navy;
             this.btnModifyCate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnModifyCate.ForeColor = System.Drawing.Color.White;
-            this.btnModifyCate.Location = new System.Drawing.Point(751, 3);
+            this.btnModifyCate.Location = new System.Drawing.Point(645, 0);
             this.btnModifyCate.Name = "btnModifyCate";
             this.btnModifyCate.Size = new System.Drawing.Size(180, 46);
             this.btnModifyCate.TabIndex = 2;
@@ -770,7 +732,7 @@
             this.btnDeleteCate.BackColor = System.Drawing.Color.Maroon;
             this.btnDeleteCate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDeleteCate.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteCate.Location = new System.Drawing.Point(565, 3);
+            this.btnDeleteCate.Location = new System.Drawing.Point(459, 0);
             this.btnDeleteCate.Name = "btnDeleteCate";
             this.btnDeleteCate.Size = new System.Drawing.Size(180, 46);
             this.btnDeleteCate.TabIndex = 1;
@@ -783,7 +745,7 @@
             this.btnAddCate.BackColor = System.Drawing.Color.Green;
             this.btnAddCate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddCate.ForeColor = System.Drawing.Color.White;
-            this.btnAddCate.Location = new System.Drawing.Point(379, 3);
+            this.btnAddCate.Location = new System.Drawing.Point(273, 0);
             this.btnAddCate.Name = "btnAddCate";
             this.btnAddCate.Size = new System.Drawing.Size(180, 46);
             this.btnAddCate.TabIndex = 0;
@@ -803,7 +765,7 @@
             this.tpItems.Padding = new System.Windows.Forms.Padding(3);
             this.tpItems.Size = new System.Drawing.Size(1127, 656);
             this.tpItems.TabIndex = 1;
-            this.tpItems.Text = "Items";
+            this.tpItems.Text = "Drinks";
             // 
             // panel6
             // 
@@ -988,70 +950,6 @@
             this.btnSearchItem.UseVisualStyleBackColor = false;
             this.btnSearchItem.Click += new System.EventHandler(this.btnSearchItem_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnView);
-            this.panel3.Controls.Add(this.btnModify);
-            this.panel3.Controls.Add(this.btnDeleteItem);
-            this.panel3.Controls.Add(this.btnAddItem);
-            this.panel3.Location = new System.Drawing.Point(6, 596);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1115, 57);
-            this.panel3.TabIndex = 0;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // btnView
-            // 
-            this.btnView.BackColor = System.Drawing.Color.Gray;
-            this.btnView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(193, 3);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(180, 46);
-            this.btnView.TabIndex = 3;
-            this.btnView.Text = "View";
-            this.btnView.UseVisualStyleBackColor = false;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
-            // btnModify
-            // 
-            this.btnModify.BackColor = System.Drawing.Color.Navy;
-            this.btnModify.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnModify.ForeColor = System.Drawing.Color.White;
-            this.btnModify.Location = new System.Drawing.Point(751, 3);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(180, 46);
-            this.btnModify.TabIndex = 2;
-            this.btnModify.Text = "Modify";
-            this.btnModify.UseVisualStyleBackColor = false;
-            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
-            // 
-            // btnDeleteItem
-            // 
-            this.btnDeleteItem.BackColor = System.Drawing.Color.Maroon;
-            this.btnDeleteItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDeleteItem.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteItem.Location = new System.Drawing.Point(565, 3);
-            this.btnDeleteItem.Name = "btnDeleteItem";
-            this.btnDeleteItem.Size = new System.Drawing.Size(180, 46);
-            this.btnDeleteItem.TabIndex = 1;
-            this.btnDeleteItem.Text = "Delete";
-            this.btnDeleteItem.UseVisualStyleBackColor = false;
-            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
-            // 
-            // btnAddItem
-            // 
-            this.btnAddItem.BackColor = System.Drawing.Color.Green;
-            this.btnAddItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnAddItem.ForeColor = System.Drawing.Color.White;
-            this.btnAddItem.Location = new System.Drawing.Point(379, 3);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(180, 46);
-            this.btnAddItem.TabIndex = 0;
-            this.btnAddItem.Text = "Add";
-            this.btnAddItem.UseVisualStyleBackColor = false;
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
-            // 
             // tpProceeds
             // 
             this.tpProceeds.BackColor = System.Drawing.Color.LightGray;
@@ -1144,6 +1042,56 @@
             this.Report.TabIndex = 0;
             this.Report.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
+            // btnAddItem
+            // 
+            this.btnAddItem.BackColor = System.Drawing.Color.Green;
+            this.btnAddItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAddItem.ForeColor = System.Drawing.Color.White;
+            this.btnAddItem.Location = new System.Drawing.Point(273, 0);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(180, 46);
+            this.btnAddItem.TabIndex = 0;
+            this.btnAddItem.Text = "Add";
+            this.btnAddItem.UseVisualStyleBackColor = false;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
+            // 
+            // btnDeleteItem
+            // 
+            this.btnDeleteItem.BackColor = System.Drawing.Color.Maroon;
+            this.btnDeleteItem.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDeleteItem.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteItem.Location = new System.Drawing.Point(459, 0);
+            this.btnDeleteItem.Name = "btnDeleteItem";
+            this.btnDeleteItem.Size = new System.Drawing.Size(180, 46);
+            this.btnDeleteItem.TabIndex = 1;
+            this.btnDeleteItem.Text = "Delete";
+            this.btnDeleteItem.UseVisualStyleBackColor = false;
+            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
+            // 
+            // btnModify
+            // 
+            this.btnModify.BackColor = System.Drawing.Color.Navy;
+            this.btnModify.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnModify.ForeColor = System.Drawing.Color.White;
+            this.btnModify.Location = new System.Drawing.Point(645, 0);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(180, 46);
+            this.btnModify.TabIndex = 2;
+            this.btnModify.Text = "Modify";
+            this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnModify);
+            this.panel3.Controls.Add(this.btnDeleteItem);
+            this.panel3.Controls.Add(this.btnAddItem);
+            this.panel3.Location = new System.Drawing.Point(6, 596);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1115, 57);
+            this.panel3.TabIndex = 0;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
             // frmAdmin
             // 
             this.AcceptButton = this.btnSearchItem;
@@ -1207,12 +1155,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.tpProceeds.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoice)).EndInit();
             this.Report.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1243,7 +1191,6 @@
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.DataGridView dataGridViewAccount;
         private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.Button btnViewAcc;
         private System.Windows.Forms.Button btnModifyAcc;
         private System.Windows.Forms.Button btnDeleteAcc;
         private System.Windows.Forms.Button btnAddAcc;
@@ -1258,7 +1205,6 @@
         private System.Windows.Forms.TextBox txbTblID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Button btnViewTbl;
         private System.Windows.Forms.Button btnModifyTbl;
         private System.Windows.Forms.Button btnDeleteTbl;
         private System.Windows.Forms.Button btnAddTbl;
@@ -1273,7 +1219,6 @@
         private System.Windows.Forms.TextBox txbCateID;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button btnViewCate;
         private System.Windows.Forms.Button btnModifyCate;
         private System.Windows.Forms.Button btnDeleteCate;
         private System.Windows.Forms.Button btnAddCate;
@@ -1296,11 +1241,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txbISearchtem;
         private System.Windows.Forms.Button btnSearchItem;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.Button btnModify;
-        private System.Windows.Forms.Button btnDeleteItem;
-        private System.Windows.Forms.Button btnAddItem;
         private System.Windows.Forms.TabPage tpProceeds;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnViewInvoice;
@@ -1309,5 +1249,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridViewInvoice;
         private System.Windows.Forms.TabControl Report;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnModify;
+        private System.Windows.Forms.Button btnDeleteItem;
+        private System.Windows.Forms.Button btnAddItem;
     }
 }

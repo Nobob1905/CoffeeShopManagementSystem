@@ -289,11 +289,6 @@ namespace CoffeeShopManagementSystem
             }
         }
 
-        private void btnView_Click(object sender, EventArgs e)
-        {
-            LoadDrinks();
-        }
-
         /* TAB CATEGORY */
         private void btnAddCate_Click(object sender, EventArgs e)
         {
@@ -357,11 +352,6 @@ namespace CoffeeShopManagementSystem
             {
                 MessageBox.Show("Delete a category fail!");
             }
-        }
-
-        private void btnViewCate_Click(object sender, EventArgs e)
-        {
-            LoadCategories();
         }
 
         /* TAB TABLE */
@@ -429,15 +419,7 @@ namespace CoffeeShopManagementSystem
             }
         }
 
-        private void btnViewTbl_Click(object sender, EventArgs e)
-        {
-            LoadTables();
-        }
         /* TAB ACCOUNT */
-        private void btnViewAcc_Click(object sender, EventArgs e)
-        {
-            LoadAccount();
-        }
 
         private void btnAddAcc_Click(object sender, EventArgs e)
         {
