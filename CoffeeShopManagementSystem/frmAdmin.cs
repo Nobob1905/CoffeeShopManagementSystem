@@ -459,6 +459,8 @@ namespace CoffeeShopManagementSystem
                 return;
             }
 
+
+
             if (AccountDAL.Instance.DeleteAccount(username))
             {
                 MessageBox.Show("Delete account successfully");
@@ -480,6 +482,13 @@ namespace CoffeeShopManagementSystem
             string phone = txbPhone.Text;
             string email = txbEmail.Text;
             string address = txbAddress.Text;
+
+            if (DataProvider.Instance.AccUsernameExists(username))
+            {
+                MessageBox.Show("A account with the same name already exists. Please use a different name.");
+                return;
+            }
+
 
             if (AccountDAL.Instance.UpdateAccount(username, displayName, type, phone, email, address))
             {
